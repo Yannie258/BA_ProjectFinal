@@ -1,0 +1,30 @@
+{
+  "title": "Plant Shop",
+  "header": {
+    "nav": {
+      "shop": "Shop",
+      "social": "Social",
+      "login": "Login"
+    },
+    "cart": {
+      "title": "Einkaufswagen",
+      "image": "Bild",
+      "name": "Name",
+      "price": "Preis",
+      "qty": "Menge",
+      "buy": "Jetzte kaufen"
+    }
+  },
+  "home": {
+    "titleBox": "OnSale"
+  },
+  "login": {
+    "login": "Einloggen",
+    "register": "Registrieren",
+    "remember": "Passwort speichern",
+    "agree": "Ich stimme den Konditionen zu."
+  },
+  "product": {
+    "titleBox": "Ähnlich"
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/navigation/collapse-down/selected</title>
+    <g id="icon/navigation/collapse-down/selected" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M12,17.83 L2.99999996,8.82999999 C2.51122797,8.34122798 2.51122798,7.54877199 2.99999998,7.05999999 C3.48877198,6.57122799 4.28122796,6.57122799 4.76999997,7.05999998 L12,14.29 L19.235,7.05499998 C19.7261361,6.58193116 20.5057973,6.5897866 20.9873019,7.07265522 C21.4688064,7.55552383 21.4744563,8.33520411 21,8.82499999 L12,17.83 Z" id="Path" fill="#000"></path>
+    </g>
+</svg>

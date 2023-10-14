@@ -1,0 +1,19 @@
+{
+  "name": "db-dashboard",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "config": "^3.3.6",
+    "excel4node": "^1.7.2",
+    "forever": "^2.0.0",
+    "log4js": "^6.1.1",
+    "node-cron": "^3.0.0",
+    "node-fetch-with-proxy": "^0.1.2",
+    "node-xlsx": "^0.15.0",
+    "python-shell": "^3.0.1",
+    "read-config": "^2.0.0",
+    "request": "^2.88.0",
+    "xlsx-chart": "^0.4.3"
+  }
+}

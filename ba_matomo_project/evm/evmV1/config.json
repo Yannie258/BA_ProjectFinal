@@ -1,0 +1,28 @@
+{
+    "config": {
+        "active_env": "dev",
+        "apiRequestTimeout": "0",
+        "dataAppending": "no",
+        "filename": "EVM-Matomo",
+        "outputStorageLocation": "./",
+        "archiveStorageLocation": "./evmV1/archive/"
+    },
+    "settings": {
+        "prod": {
+           "token": "c82a0e5f5fdf20e7a14b51c9557a5092",
+           "url": "https://kocoyo-matomo01.evm.de/matomo/?module=API",
+           "cronSchedule": "0 3 * * *"
+        },
+        "dev": {
+            "token2": "c82a0e5f5fdf20e7a14b51c9557a5092",
+            "url2": "https://kocoyo-matomo01.evm.de/matomo/?module=API",
+            "token": "d73766dded7c8310d7c3d4faac893357",
+            "url": "https://wap.service.deutschebahn.com/piwik/?module=API",
+            "cronSchedule": "* * * * *"
+         }
+    },
+    "content":{
+        "rangeToBeQueriedInDays": "365",
+        "rubriks" : []
+    }
+}

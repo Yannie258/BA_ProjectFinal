@@ -1,0 +1,30 @@
+{
+  "title": "Plant Shop",
+  "header": {
+    "nav": {
+      "shop": "Shop",
+      "social": "Social",
+      "login": "Login"
+    },
+    "cart": {
+      "title": "Cart",
+      "image": "Image",
+      "name": "Name",
+      "price": "Price",
+      "qty": "Qty",
+      "buy": "Buy Now"
+    }
+  },
+  "home": {
+    "titleBox": "OnSale"
+  },
+  "login": {
+    "login": "Login",
+    "register": "Register",
+    "remember": "Remember Password",
+    "agree": "I agree to terms & conditionals"
+  },
+  "product": {
+    "titleBox": "Similar"
+  }
+}

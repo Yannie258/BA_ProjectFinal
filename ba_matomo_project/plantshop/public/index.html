@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script type="text/javascript" src="https://tag.aticdn.net/621170/smarttag.js"></script> <!-- ATI Smarttag -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--link rel="icon" href="%PUBLIC_URL%/favicon.ico"/-->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet" />
+  <title>plantshop-vue</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <style>@font-face {
+    font-family: 'HelveticaNeueLTCom'; font-weight: 400; font-style: normal; font-display: swap;
+    src: local('./fonts/HelveticaNeueLTCom400.woff2') format('woff2'), local('./fonts/HelveticaNeueLTCom400.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'HelveticaNeueLTCom'; font-weight: 700; font-style: normal; font-display: swap;
+    src: local('./fonts/HelveticaNeueLTCom700.woff2') format('woff2'), local('./fonts/HelveticaNeueLTCom700.woff') format('woff');
+  }</style>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="theme-color" content="#000000"/>
+  <meta name="description" content="Web site created using create-react-app"/>
+  <link href="/static/webchat-latest.css" rel="stylesheet">
+<!-- Matomo Tag Manager -->
+<script type="text/javascript">
+var _mtm = window._mtm = window._mtm || [];
+_mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+g.type='text/javascript'; g.async=true; g.src='http://di-tools.t-systems-mms.com/matomo/js/container_XZ5023YV.js'; s.parentNode.insertBefore(g,s);
+</script>
+<!-- End Matomo Tag Manager -->
+</head>
+<body>
+
+  
+    <!-- Loading script synchronously 
+    <script type="text/javascript" src="https://tags.tiqcdn.com/utag/t-systems-ms-training/shaurya-testshop/qa/utag.js"></script>
+   -->
+   <script type="text/javascript" src="https://tags.tiqcdn.com/utag/t-systems-ms-training/shaurya-testshop/dev/utag.js"></script>
+      
+  <noscript>
+    <strong>We're sorry but plantshop-vue doesn't work properly without JavaScript
+      enabled. Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <div id="webchat"></div>
+  <script src="/static/webchat-latest.js"
+	  ></script>
+  <!-- built files will be auto injected -->
+
+  <script type="text/javascript">
+
+
+   function clean(str) {
+    return str
+      .normalize("NFD")
+      .toLowerCase()
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[&\/\\#,@!;+()$~%.'":*?<>{} ]/g, "_")
+      .replace(/[_]+/g, "_");
+  }
+
+  var tag = new ATInternet.Tracker.Tag();
+
+  //Seitentracking
+  var parts = window.location.href;
+  var level = parts.split("/");
+
+  switch(level.length) {
+          case 6:
+              tag.page.set({
+                name: level[5],
+                chapter1:'shaurya-testshop',
+                chapter2: level[4]
+              }); 
+            break;
+          case 5:
+              tag.page.set({
+                name: level[4],
+                chapter1:'shaurya-testshop',
+              });
+            break;
+          case 4:
+          if(level[3] == 'de' || level[3] == 'en'){
+                level[3] = 'home'
+              } else level[3] = level[3];
+              tag.page.set({
+                name: level[3],
+                chapter1:'shaurya-testshop'
+              });
+            break;
+          default:
+            tag.page.set({
+                name: 'home',
+                chapter1:'shaurya-testshop',
+              });
+          }
+          tag.dispatch();
+  
+(function (history) {
+    var pushState = history.pushState;
+    history.pushState = function (state) {
+        if (typeof history.onpushstate == "function") {
+            history.onpushstate({
+                state: state
+            });
+        }
+        setTimeout(function () {
+          var parts = window.location.href;
+          var level = parts.split("/");
+
+          switch(level.length) {
+          case 6:
+              tag.page.send({
+                name: level[5],
+                chapter1:'shaurya-testshop',
+                chapter3: level[4]
+              }); 
+            break;
+          case 5:
+              tag.page.send({
+                name: level[4],
+                chapter1:'shaurya-testshop',
+                chapter2: level[3]
+              });
+            break;
+          case 4:
+          if(level[3] == 'de' || level[3] == 'en'){
+                level[3] = 'home'
+              } else level[3] = level[3];
+              tag.page.send({
+                name: level[3],
+                chapter1:'shaurya-testshop'
+              });
+            break;
+          default:
+            tag.page.send({
+                name: 'home',
+                chapter1:'shaurya-testshop',
+              }); 
+            }
+        }, 1000);
+
+  $(function() {
+    if(window.location.href.indexOf('/product/')){
+    var pname = $(document).find("#title-product").text(); pname = clean(pname);
+    var price = $(document).find("#prod_price").text().substr(2).replace(",","."); 
+
+   //Verfügbarkeit prüfen
+    var stock = jQuery('p[data-v-1c354f03]').eq(3).text();
+    var onstock = stock.split(':');
+    if(onstock[1] === 'verfügbar'){
+      stock = true;
+    } else stock = false;
+
+    tag.events.add('product.display',
+     {
+      "id":jQuery("p[data-v-1c354f03]").eq(1).text().split(":")[1].trim(),
+      "$": pname,
+      "pricetaxincluded": price,
+      "stock": stock,
+      "category1": "Pflanzen"
+     });
+    }
+    tag.dispatch(); 
+  });
+
+        return pushState.apply(history, arguments);
+    }
+})
+(window.history); 
+
+window.jQuery(window).on('popstate', function (event) {
+  var parts = window.location.href;
+  var level = parts.split("/");
+
+        switch(level.length) {
+          case 6:
+              tag.page.send({
+                name: level[5],
+                chapter1:'shaurya-testshop',
+                chapter2: level[4]
+              }); 
+            break;
+          case 5:
+              tag.page.send({
+                name: level[4],
+                chapter1:'shaurya-testshop',
+              });
+            break;
+          case 4:
+              tag.page.send({
+                name: level[3],
+                chapter1:'shaurya-testshop'
+              });
+            break;
+          default:
+            tag.page.send({
+                name: 'home',
+                chapter1:'shaurya-testshop',
+              }); 
+          }
+
+  $(function() {
+    if(window.location.href.indexOf('/product/')){
+    var pname = $(document).find("#title-product").text(); pname = clean(pname);
+    var price = $(document).find("#prod_price").text().substr(2).replace(",","."); 
+
+  //Verfügbarkeit prüfen
+    var stock = jQuery('p[data-v-1c354f03]').eq(3).text();
+    var onstock = stock.split(':');
+    if(onstock[1] === 'verfügbar'){
+      stock = true;
+    } else stock = false;
+
+    tag.events.add('product.display',
+     {
+      "id":jQuery("p[data-v-1c354f03]").eq(1).text().split(":")[1].trim(),
+      "$": pname,
+      "pricetaxincluded": price,
+      "stock": stock,
+      "category1": "Pflanzen"
+     });
+  }
+  }); 
+  tag.dispatch(); 
+});
+
+
+
+</script>
+
+</body>
+</html>

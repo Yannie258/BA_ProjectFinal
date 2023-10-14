@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "labelOfPrimaryDimension": {
+              "type": "string"
+            },
+            "event": {
+              "type": "integer"
+            },
+            "visits": {
+              "type": "integer"
+            },
+            "subtable": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "labelOfSecondaryDimesnion": {
+                      "type": "string"
+                    },
+                    "event": {
+                      "type": "integer"
+                    },
+                    "visit": {
+                      "type": "integer"
+                    },
+                    "subtable": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "labelOfChildren": {
+                              "type": "string"
+                            },
+                            "events": {
+                              "type": "integer"
+                            },
+                            "visits": {
+                              "type": "integer"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

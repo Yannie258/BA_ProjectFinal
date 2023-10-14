@@ -1,0 +1,1 @@
+forever stop ./evmV1/index.js
